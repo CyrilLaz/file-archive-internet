@@ -1,0 +1,37 @@
+{
+  "name": "file-archive-internet",
+  "version": "0.0.1",
+  "description": "скачиваем, упаковываем, отправляем, принимаем, обрабатываем",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon ./app.js",
+    "start": "node ./app.js",
+    "server": "nodemon ./server.js",
+    "send": "nodemon ./components/readAndSend.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyrilLaz/file-archive-internet.git"
+  },
+  "keywords": [
+    "post"
+  ],
+  "author": "Cyril Lazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyrilLaz/file-archive-internet/issues"
+  },
+  "homepage": "https://github.com/CyrilLaz/file-archive-internet#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "archiver": "^5.3.1",
+    "body-parser": "^1.20.1",
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "request": "^2.88.2"
+  }
+}
