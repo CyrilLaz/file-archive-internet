@@ -9,6 +9,7 @@ const {
   SERVER,
 } = process.env;
 
+
 // console.log(process.argv);
 const SWITCH = Number(process.argv[2]);
 
