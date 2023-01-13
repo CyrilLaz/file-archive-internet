@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "test",
-    "dev": "nodemon ./app.js",
-    "start": "node ./app.js",
+    "dev": "nodemon ./app.js ",
+    "down": "node ./app.js 0",
     "server": "nodemon ./server.js",
-    "send": "nodemon ./components/readAndSend.js"
+    "send": " node ./app.js 1"
   },
   "repository": {
     "type": "git",

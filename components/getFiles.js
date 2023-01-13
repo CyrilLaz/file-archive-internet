@@ -1,11 +1,14 @@
 const request = require('request');
 
 async function getPage(url) {
- return request(url, function (err, res, body) {
-    if (err) throw err;
-    // console.log(body);
-    return body// console.log(`${name} готов, пошли дальше`);
+ return new Promise((resolve, reject) => {
+   request(url, function (err, res, body) {
+    if (err) reject(err);
+ 
+    return resolve(body)
   });
+ }) 
+
 }
 
 module.exports = {getPage};
