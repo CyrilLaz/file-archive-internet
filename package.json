@@ -28,10 +28,8 @@
   },
   "dependencies": {
     "archiver": "^5.3.1",
-    "body-parser": "^1.20.1",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
     "request": "^2.88.2"
   }
 }
