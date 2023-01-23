@@ -4,9 +4,8 @@ const path = require('path');
 const appendToArhive = require('./controllers/appendToArhive');
 const readAndSend = require('./controllers/readAndSend');
 
-const { URL = 'https://www.dns-shop.ru', SERVER } = process.env;
+const { URL = 'https://example.com', SERVER = 'http://localhost:3032/upload' } = process.env;
 
-// console.log(process.argv);
 const SWITCH = Number(process.argv[2]);
 
 const nameArchive = `archive.zip`;
@@ -24,12 +23,12 @@ switch (SWITCH) {
 
   case 1:
     readAndSend(nameArchive, SERVER)
-      .then((body) => {
+      .then((res) => {
+        const pathToArchive = path.join(path.resolve('./temp'), nameArchive);
         const stats = fs.statSync(
-          path.join(path.resolve('./temp'), nameArchive)
+          pathToArchive
         );
         const fileSizeInBytes = stats.size;
-        const res = JSON.parse(body);
 
         if (fileSizeInBytes === res.stats.size) {
           console.log('Файл успешно отправлен');
@@ -38,7 +37,6 @@ switch (SWITCH) {
         }
       })
       .catch((err) => console.log(err));
-
     break;
 
   default:
@@ -46,4 +44,3 @@ switch (SWITCH) {
     break;
 }
 
-// appendToArhive().then(() => archive.finalize());

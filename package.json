@@ -1,13 +1,11 @@
 {
   "name": "file-archive-internet",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "скачиваем, упаковываем, отправляем, принимаем, обрабатываем",
   "main": "app.js",
   "scripts": {
-    "test": "test",
     "dev": "nodemon ./app.js ",
     "down": "node ./app.js 0",
-    "server": "nodemon ./server.js",
     "send": " node ./app.js 1"
   },
   "repository": {

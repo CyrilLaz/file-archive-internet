@@ -8,7 +8,6 @@ async function getPage(url) {
     return resolve(body)
   });
  }) 
-
 }
 
 module.exports = {getPage};

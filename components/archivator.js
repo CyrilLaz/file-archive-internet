@@ -6,14 +6,12 @@ const archive = archiver('zip', {
   
   archive.on('warning', function(err) {
     if (err.code === 'ENOENT') {
-      // log warning
+      console.log(err);
     } else {
-      // throw error
       throw err;
     }
   });
-  
-  // good practice to catch this error explicitly
+ 
   archive.on('error', function(err) {
     throw err;
   });
