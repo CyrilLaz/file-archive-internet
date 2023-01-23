@@ -4,7 +4,7 @@ const path = require('path');
 const appendToArhive = require('./controllers/appendToArhive');
 const readAndSend = require('./controllers/readAndSend');
 
-const { URL = 'https://example.com', SERVER = 'http://localhost:3032/upload' } = process.env;
+const { URL = 'https://example.com', SERVER = 'http://localhost:3000/upload' } = process.env;
 
 const SWITCH = Number(process.argv[2]);
 
@@ -40,7 +40,7 @@ switch (SWITCH) {
     break;
 
   default:
-    console.log('ВВедена не правильная команда');
+    console.log('Введена не правильная команда');
     break;
 }
 

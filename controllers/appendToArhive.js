@@ -9,7 +9,7 @@ async function appendToArhive(nameArchive, URL) {
     // проверка наличия папки архива
     fs.mkdirSync(dir);
   }
-  const output = fs.createWriteStream(join(resolve('./temp'), nameArchive)); //path.join(path.resolve('./temp'), files[0])
+  const output = fs.createWriteStream(join(resolve('./temp'), nameArchive));
   let count=0;
   archive.pipe(output);
   console.log('Начали скачивание');
